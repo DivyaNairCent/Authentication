@@ -17,7 +17,6 @@ module.exports.displayProfileHomePage = (req, res, next) => {
 
 }
 module.exports.displayAboutPage = (req, res, next) => {
-    
     res.render('index_about', { title: 'About Me', displayName:req.user ? req.user.displayName: '' });
 
 }
@@ -145,5 +144,5 @@ module.exports.processRegisterPage = (req, res, next) => {
 module.exports.performLogout = (req, res, next) =>
 {
     req.logout();
-    res.redirect('/');
+    res.redirect('/login');
 }
