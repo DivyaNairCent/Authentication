@@ -3,6 +3,16 @@ let router = express.Router();
 
 let indexController = require('../controllers/index');
 
+function requireAuth(req, res, next)
+{
+    //check if user is logged in
+    if(!req.isAuthenticated())
+    {
+        return res.redirect('/login');
+    
+    }
+    next();
+}
 /* GET home page. */
 router.get('/', indexController.displayHomePage);
 
@@ -13,13 +23,13 @@ router.get('/home', indexController.displayProfileHomePage);
 router.get('/home', indexController.displayHomePage);
 
 /* GET About page. */
-router.get('/about', indexController.displayAboutPage);
+router.get('/about',requireAuth, indexController.displayAboutPage);
 
 /* GET Projects page. */
-router.get('/projects', indexController.displayProjectsPage);
+router.get('/projects', requireAuth, indexController.displayProjectsPage);
 
 /* GET Services page. */
-router.get('/services', indexController.displayServicesPage);
+router.get('/services', requireAuth, indexController.displayServicesPage);
 
 /* GET Contact Me page. */
 router.get('/contact', indexController.displayContactPage );
