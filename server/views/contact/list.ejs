@@ -4,38 +4,44 @@
 
 <!--Main Content-->
   <main class="container">
-    <div class="row">
-        <div class="offset-mid-1 col-md-11">
-            <h1><%= title %></h1>
-            
-            <br>
-            <table class="table table-bordered table-striped table-hover">
-                <!-- Header Row-->
-                <tr class="d-flex">
-                    <th class="text-center col-2">Name</th>
-                    <th class="text-center  col-2">Contact Number</th>
-                    <th class="text-center  col-3">Email Id</th>
-                    <th class="text-center  col-1"></th>
-                    <th class="text-center  col-1"></th>
-                </tr>
-           
-                <!-- Repeatable Template Row-->
-                <% for(let count=0; count< ContactList.length; count++){ %>
-                    <tr class="d-flex">
-                        <td class="text-center  col-2"><%= ContactList[count].name %></td>
-                        <td class="text-center  col-2"><%= ContactList[count].number %></td>
-                        <td class="text-center  col-3"><%= ContactList[count].email %></td>
-                        <td class="text-center  col-1">
-                            <a href="/contact-list/edit/<%= ContactList[count].id %>" class="btn btn-primary btn-sm">
-                            <i class="fas fa-pencil alt"></i> Update </a>
-                        </td>
-                        <td class="text-center  col-1">
-                            <a href="/contact-list/delete/<%= ContactList[count].id %>" class="btn btn-danger btn-sm">
-                            <i class="fas fa-trash-alt"></i>Delete</a>
-                        </td>        
+    <div class="jumbotron"> 
+        <div class="row">
+            <div class="offset-mid-1 col-md-11">
+                <h1><%= title %></h1>
+                
+                <br>
+                <table class="table table-bordered table-striped table-hover">
+                    <!-- Header Row-->
+                    <tr >
+                        <th class="text-center  col-2" style= "border: 2px solid black;">Name</th>
+                        <th class="text-center  col-2" style= "border: 2px solid black;">Contact Number</th>
+                        <th class="text-center  col-3" style= "border: 2px solid black;">Email Id</th>
+                        <% if(typeof displayName == 'string' && displayName) { %>
+                        <th class="text-center  col-2" style= "border: 2px solid black;"></th>
+                        <th class="text-center  col-2" style= "border: 2px solid black;"></th>
+                        <% } %>
                     </tr>
-                <% } %>
-            </table>
+                    
+                    <!-- Repeatable Template Row-->
+                    <% for(let count=0; count< ContactList.length; count++){ %>
+                        <tr >
+                            <td class="text-center col-des col-2"  style= "border: 2px solid black;"><%= ContactList[count].name %></td>
+                            <td class="text-center  col-2"  style= "border: 2px solid black;"><%= ContactList[count].number %></td>
+                            <td class="text-center  col-3"  style= "border: 2px solid black;"><%= ContactList[count].email %></td>
+                            <% if(typeof displayName == 'string' && displayName) { %>
+                            <td class="text-center  col-2"  style= "border: 2px solid black;">
+                                <a href="/contact-list/edit/<%= ContactList[count].id %>" class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i> Update </a>
+                            </td>
+                            <td class="text-center  col-2"  style= "border: 2px solid black;">
+                                <a href="/contact-list/delete/<%= ContactList[count].id %>" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i>Delete</a>
+                            </td>  
+                            <% } %>      
+                        </tr>
+                    <% } %>
+                </table>
+            </div>
         </div>
     </div>
   </main>

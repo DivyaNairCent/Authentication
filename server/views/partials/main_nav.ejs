@@ -1,7 +1,7 @@
 <!--Main Navigation bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" style ="font-family: Freight Display Pro" href="/">Divya Nair</a> <img src="Assets\images/logo_image.PNG" />
+      <a class="navbar-brand" style ="font-family: Freight Display Pro" href="/">Divya Nair</a> <img src="\Assets\images/logo_image.PNG" />
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -56,6 +56,18 @@
           <% } %>
             <a class="nav-link" href="/contact"><i class="fas fa-mobile-alt"></i> Contact Me</a>
           </li>
+
+          <% if(typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text"><i class="fas fa-lg fa-user"></i>Welcome, <%= displayName %></li>
+          <li class="nav-item"><a href='/logout' class="nav-link">
+            <i class="fas fa-lg fa-sign-out-alt"></i>Logout</a></li>
+          <% }else { %>
+            <li class="nav-item"> <a href='/login' class="a nav-link">
+                <i class="fas fa-lg fa-sign-in-alt"></i>Login</a>
+            </li>
+            <%
+            
+          } %>
           
     </div>
   </nav>

@@ -22,7 +22,7 @@ let contactController = require('../controllers/contact')
 router.get('/', contactController.displayContactList);
 
 /*GET  Route for display the Edit Page - CREATE operation*/
-router.get('/edit/:id',requireAuth, contactController.displayEditPage);
+router.get('/edit/:id', contactController.displayEditPage);
 
 /*POST  Route for processing the Edit Page - CREATE operation*/
 router.post('/edit/:id', requireAuth, contactController.processEditPage);

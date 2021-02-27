@@ -15,7 +15,11 @@ module.exports.displayContactList = (req,res,next) =>{
         else
         {
             //console.log(ContactList);
-            res.render('contact/list', {title:'Business Contacts', ContactList: ContactList});
+            res.render('contact/list', 
+            {title:'Business Contacts', 
+            ContactList: ContactList,
+            displayName: req.user ? req.user.displayName : ''
+        });
         }
     });
 };
@@ -33,7 +37,12 @@ module.exports.displayEditPage = (req, res, next) => {
         }
         else{
             //show the edit view
-            res.render('contact/edit', {title: 'Update Bussiness Contact', contact: contactToEdit});
+            res.render('contact/edit', 
+            {
+                title: 'Update Bussiness Contact', 
+                contact: contactToEdit,
+                displayName: req.user ? req.user.displayName : ''
+            });
         }
     }); 
 }

@@ -156,6 +156,10 @@ textarea
     display: -ms-flexbox!important;
     display: flex!important;
 }
+.d-flex {
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
 
 /* styling for background*/
 .hero-bg {
@@ -184,4 +188,40 @@ textarea
     width:70%;
     border: 2px solid black; 
     background-color:white ;
+}
+
+.form-group1
+{
+    margin-bottom:1rem
+}
+
+
+/* styling for form fields*/
+.form-control
+{
+    width:350px;
+}
+
+/* styling for form buttons*/
+
+.btn-warning
+{
+    width:100px;
+}
+
+/* styling for form buttons*/
+
+.btn-success
+{
+    width:100px;
+}
+
+.table-bordered
+{
+    border: 2px solid black; 
+}
+
+.col-des
+{
+    border: 2px solid black  ;
 }

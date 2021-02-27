@@ -1,16 +1,20 @@
 <%- include ../partials/header.ejs%>
 
 <%- include ../partials/main_nav.ejs%>
+<link rel='stylesheet' href='/Content/app.css' />
 
 <!-- Content for edit page-->
+
 <div class="container">
+        <div class="jumbotron"> 
+
     <div class="row">
         <div class = "offset-md-3 col-md-6">
-            <h1><%= title %></h1>
-
+            <h2 class="display-6" style="text-align: center;"><%= title %></h2>
+            <p><br></p>
             <form class="form" method = "POST">   
                 <div class="form-group">
-                    <label for="nameTextField">Business Contact Name</label>
+                    <b><I>Business Contact Name</b></I>
                     <input type="text" class="form-control"
                     id="nameTextField"
                     placeholder="Enter the name"
@@ -20,7 +24,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="numberTextField">Contact Number</label>
+                    <b><I>Contact Number</b></I>
                     <input type="text" class="form-control"
                     id="numberTextField"
                     placeholder="Enter the contact number"
@@ -30,7 +34,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="mailTextField">Email Address</label>
+                    <b><I>Email Address</b></I>
                     <input type="text" class="form-control"
                     id="mailTextField"
                     placeholder="Enter the email address"
@@ -41,15 +45,19 @@
 
                 
 
-                <button class="btn btn-primary" type="submit">
+                <button class="btn btn-primary btn-sm" type="submit">
                     <i class="fas fa-edit"> </i>Submit</button>
+
+                    <a href="/contact-list/delete/<%= contact.id %>" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i>Delete</a>
+                                <br><br>
                     
-                    <a href="/book-list" class="btn btn-warning">
+                    <a href="/book-list" class="btn-warning btn-sm">
                         <i class="fas fa-undo">Cancel</i></a>
             </form>
 
         </div>
-    </div>
+   </div>
 </div>
 
 

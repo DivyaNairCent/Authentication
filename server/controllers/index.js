@@ -8,31 +8,32 @@ let userModel = require('../models/user');
 let User = userModel.User; //alias
 
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('index', {title:'Home'});
+    res.render('index', {title:'Home', displayName:req.user ? req.user.displayName: ''});
 
 }
 
 module.exports.displayProfileHomePage = (req, res, next) => {
-    res.render('index_home', {title:'Home'});
+    res.render('index_home', {title:'Home', displayName:req.user ? req.user.displayName: ''});
 
 }
 module.exports.displayAboutPage = (req, res, next) => {
-    res.render('index_about', { title: 'About Me' });
+    
+    res.render('index_about', { title: 'About Me', displayName:req.user ? req.user.displayName: '' });
 
 }
 
 module.exports.displayProjectsPage = (req, res, next) => {
-    res.render('index', { title: 'Projects' });
+    res.render('index', { title: 'Projects', displayName:req.user ? req.user.displayName: '' });
 
 }
 
 module.exports.displayServicesPage = (req, res, next) => {
-    res.render('index', { title: 'Services' });
+    res.render('index', { title: 'Services', displayName:req.user ? req.user.displayName: '' });
 
 }
 
 module.exports.displayContactPage = (req, res, next) => {
-    res.render('index_contact', { title: 'Contact Me' });
+    res.render('index_contact', { title: 'Contact Me', displayName:req.user ? req.user.displayName: '' });
 
 }
 
@@ -143,6 +144,6 @@ module.exports.processRegisterPage = (req, res, next) => {
 
 module.exports.performLogout = (req, res, next) =>
 {
-    res.logout();
+    req.logout();
     res.redirect('/');
 }
