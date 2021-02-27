@@ -1,0 +1,61 @@
+<%- include ../partials/header.ejs%>
+
+<%- include ../partials/main_nav.ejs%>
+
+<!-- Content for edit page-->
+<div class="container">
+    <div class="row">
+        <div class = "offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method = "POST">   
+                <div class="form-group">
+                    <label for="nameTextField">Business Contact Name</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter the name"
+                    name="name" 
+                    value= "<%= contact.name %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="numberTextField">Contact Number</label>
+                    <input type="text" class="form-control"
+                    id="numberTextField"
+                    placeholder="Enter the contact number"
+                    name="number" 
+                    value= "<%= contact.number %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mailTextField">Email Address</label>
+                    <input type="text" class="form-control"
+                    id="mailTextField"
+                    placeholder="Enter the email address"
+                    name="email"
+                    value= "<%= contact.email %>"
+                    required>
+                </div>
+
+                
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"> </i>Submit</button>
+                    
+                    <a href="/book-list" class="btn btn-warning">
+                        <i class="fas fa-undo">Cancel</i></a>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<%- include ../partials/bottom_nav.ejs%>
+
+<%- include ../partials/footer.ejs%>
+

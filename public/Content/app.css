@@ -1,0 +1,187 @@
+/* File Name: app.css
+Name: Divya Nair
+Id: 301169854
+Date: 12/02/2021 */
+
+
+/* styling for jumbatron*/
+.jumbotron
+{
+    background: url('image_backgrnd.jpg');
+    margin: 50px 50px 75px 100px;
+}
+
+/* styling for display-4 class*/
+.display-4
+{
+    text-align: center;
+    
+}
+
+/* styling for table content*/
+.tab_con
+{
+    border:2px solid black ;
+    padding: 25px 25px 25px 25px;
+}
+
+/* styling for table rows*/
+.row_con
+{
+    border:0px solid black; 
+    height:50px; 
+    display: table-row;
+    width: 800px;
+
+}
+
+/* styling for table columns*/
+.col_con
+{
+    border:0px solid black;
+    text-align: center ;
+    display: table-cell;
+    float: right; 
+    width: 500px; 
+    height:50px;  
+    margin-left:10px"
+}
+
+/* styling for main class*/
+.main_con{
+
+    border:0px solid black;
+    height:300px; 
+    display: table-row ;
+}
+
+/* styling for main sub class*/
+.main_con_r1
+{
+    border:0px solid black;
+    text-align: center ;
+    display: table-cell; 
+    float: right;
+    width: 700px;
+    height:270px;
+    margin-left:10px;
+}
+
+/* styling for image class*/
+.profile-image 
+{
+    background: linear-gradient(to left bottom, var(--bg) 50%, var(--p-color) 50%);
+}
+
+/* styling for row class*/
+.row 
+{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y)*-1);
+    margin-right: calc(var(--bs-gutter-x)/-2);
+    margin-left: calc(var(--bs-gutter-x)/-2);
+}
+
+/* styling for display-2*/
+.display-2
+{
+   text-align: center;
+font-size: 50px;
+}
+
+/* styling for form in contact page*/
+.form {
+    margin: 0 auto;
+    width: 210px;
+}
+
+/* styling for labels in form*/
+label{
+    display:inline-block;
+    width:200px;
+    margin-right:30px;
+    text-align:right;
+    }
+  
+
+ /* styling for fieldset in form*/   
+fieldset{
+    border:none;
+    width:500px;
+    margin:0px auto;
+    }
+
+/* styling for text area in form*/
+textarea
+{
+     margin-left:230px;
+        
+}
+
+/* styling for form button*/
+.m_btn{
+    margin-left:230px;
+}
+
+/* styling for section class*/
+.hero {
+    position: relative;
+    padding: 5em 0;
+    overflow: hidden;
+}
+
+/* styling for alignment*/
+.align-items-center {
+    -ms-flex-align: center!important;
+    align-items: center!important;
+}
+
+/* styling for content alignment*/
+.justify-content-center {
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+
+/* styling for heading*/
+.d-flex {
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+
+/* styling for background*/
+.hero-bg {
+    background: linear-gradient(
+170deg
+, var(--primary-color) 64%, var(--white-color) 30%);
+}
+
+/* styling for contact details section*/
+.contact_det
+{
+    float: left; 
+    border: 2px solid black;
+    width:30%; 
+    background-color:black; 
+    position: right;
+    margin-left:50px;
+    padding: 125px 10px 25px 10px; 
+
+}
+/* styling for contact message section*/
+.contact_mess
+{
+    float:right; 
+    padding: 125px 10px 25px 0px; 
+    width:70%;
+    border: 2px solid black; 
+    background-color:white ;
+}
