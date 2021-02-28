@@ -52,14 +52,15 @@
           <% if(title == "Contact Me") { %>
           <li class="nav-item active">
           <% } else { %>
-          <li class="nav-item">
+          <li class="nav-item ">
           <% } %>
-            <a class="nav-link" href="/contact"><i class="fas fa-mobile-alt"></i> Contact Me</a>
+            <a class="nav-link " href="/contact"><i class="fas fa-mobile-alt"></i> Contact Me</a>
           </li>
-
+          </ul>
+        <ul>
           <% if(typeof displayName == 'string' && displayName) { %>
           <li class="navbar-text"><i class="fas fa-lg fa-user"></i>Welcome, <%= displayName %></li>
-          <li class="nav-item"><a href='/logout' class="nav-link">
+          <li class="nav-item"><a href='/logout' class="nav-link navbar-col ">
             <i class="fas fa-lg fa-sign-out-alt"></i>Logout</a></li>
           <% }else { %>
             <li class="nav-item"> <a href='/login' class="a nav-link">
@@ -68,6 +69,7 @@
             <%
             
           } %>
+         </ul> 
           
     </div>
   </nav>
