@@ -23,7 +23,7 @@ router.get('/home', indexController.displayProfileHomePage);
 router.get('/home', indexController.displayHomePage);
 
 /* GET About page. */
-router.get('/about',requireAuth, indexController.displayAboutPage);
+router.get('/about', indexController.displayAboutPage);
 
 /* GET Projects page. */
 router.get('/projects', requireAuth, indexController.displayProjectsPage);

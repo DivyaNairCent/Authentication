@@ -216,22 +216,26 @@ textarea
     width:100px;
 }
 
+/* styling for table*/
 .table-bordered
 {
     border: 2px solid black; 
 }
 
+/* styling for table column*/
 .col-des
 {
     border: 2px solid black  ;
 }
 
+/* styling for navigation bar*/
 .navbar-nav {
     
     padding-right: 200px;
     
 }
 
+/* styling for navigation bar item*/
 .navbar-col {
 color:grey
 }
