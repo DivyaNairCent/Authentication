@@ -1,9 +1,13 @@
 {
-  "name": "week3.1",
-  "version": "0.0.0",
+  "name": "week-6",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./server.js"
+  },
+  "engine": {
+    "node": "^12.00.0",
+    "npm": "^6.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
@@ -30,5 +34,17 @@
     "@types/mongoose": "^5.10.3",
     "@types/passport-local": "^1.0.33",
     "@types/passport-local-mongoose": "^4.0.13"
-  }
+  },
+  "description": "authentication for express portfolio",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DivyaNairCent/Authentication.git"
+  },
+  "author": "Divya Nair",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DivyaNairCent/Authentication/issues"
+  },
+  "homepage": "https://github.com/DivyaNairCent/Authentication#readme"
 }
