@@ -7,6 +7,7 @@ let passport = require('passport');
 let userModel = require('../models/user');
 let User = userModel.User; //alias
 
+
 module.exports.displayHomePage = (req, res, next) => {
     res.render('index', {title:'Home', displayName:req.user ? req.user.displayName: ''});
 
@@ -45,7 +46,6 @@ module.exports.displayLoginPage = (req, res, next) => {
         {
             title: "Login",
             messages: req.flash('loginMessage'),
-            displayName: req.user ? req.user.displayName : ' '
         });
     }
     else
